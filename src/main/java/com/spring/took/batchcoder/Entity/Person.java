@@ -1,39 +1,28 @@
 package com.spring.took.batchcoder.Entity;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class User {
+public class Person {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private Long id;
-   private String userId;
+    private Long id;
+
+    private String userId;
     private String firstName;
     private String lastName;
     private String gender;
     private String email;
     private String phone;
-    private String dateofbirth;
+    private String dateOfBirth;
     private String jobTitle;
 
-    public  User(){
-
-    }
-
-    public User(Long id, String userId, String firstName, String lastName, String gender, String email, String phone, String dateofbirth, String jobTitle) {
-        this.id = id;
-        this.userId = userId;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.gender = gender;
-        this.email = email;
-        this.phone = phone;
-        this.dateofbirth = dateofbirth;
-        this.jobTitle = jobTitle;
-    }
+    // Getters and Setters
 
     public Long getId() {
         return id;
@@ -91,12 +80,12 @@ public class User {
         this.phone = phone;
     }
 
-    public String getDateofbirth() {
-        return dateofbirth;
+    public String getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setDateofbirth(String dateofbirth) {
-        this.dateofbirth = dateofbirth;
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getJobTitle() {
